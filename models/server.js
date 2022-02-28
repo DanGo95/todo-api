@@ -11,6 +11,7 @@ class Server {
 
         /* define los endpoints de la api */
         this.paths = {
+            angular: '/',
             auth: '/api/auth',
             nota: '/api/notas'
         }
@@ -45,6 +46,7 @@ class Server {
 
     routes() {
 
+        this.app.use(this.paths.angular, require('../routes/angular'));
         this.app.use(this.paths.auth, require('../routes/auth'));
         this.app.use(this.paths.nota, require('../routes/nota'));
 
