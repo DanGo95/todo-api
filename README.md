@@ -1,4 +1,4 @@
-# Todo-front
+# Todo-API
 
 API para aplicación web de notas, la cual cuenta con sistema de login con jwt, donde solo se pide email y contraseña. Las notas se pueden crear, editar y eliminar.
 Se puede utilizar junto al frontend: [Todo-front](https://github.com/DanGo95/todo-front), el cual ya se encuentra compilado en el directorio público.
