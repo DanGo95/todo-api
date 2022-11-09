@@ -19,7 +19,7 @@ router.post('/', [
     validarJWT,
     check('descripcion', 'La descripcion es obligatoria').not().isEmpty(),
     validarInputs
-], crearNota)
+], crearNota);
 
 /* actualizar nota */
 router.put('/:id', [
@@ -28,7 +28,7 @@ router.put('/:id', [
     check('id').custom(notaExiste),
     check('id').custom(mismoUsuario),
     validarInputs
-], actualizarNota)
+], actualizarNota);
 
 /* eliminar nota */
 router.delete('/:id', [
@@ -37,7 +37,7 @@ router.delete('/:id', [
     check('id').custom(notaExiste),
     check('id').custom(mismoUsuario),
     validarInputs
-], eliminarNota)
+], eliminarNota);
 
 
 module.exports = router;

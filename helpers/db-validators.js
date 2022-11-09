@@ -20,7 +20,7 @@ const notaExiste = async(id = '') => {
     if (!checkId) {
         throw new Error('La nota no existe');
     }
-}
+};
 
 
 
@@ -34,11 +34,11 @@ const mismoUsuario = async(id, { req }) => {
         throw new Error('No tiene permisos para modificar esta nota');
     }
 
-}
+};
 
 
 module.exports = {
     emailExiste,
     notaExiste,
     mismoUsuario
-}
+};

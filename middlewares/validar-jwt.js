@@ -1,9 +1,9 @@
-const { response, request } = require('express')
+const { response, request } = require('express');
 const jwt = require('jsonwebtoken');
 
 const Usuario = require('../models/usuario');
 
-const validarJWT = async(req = request, res = response, next) => {
+const validarJWT = async( next, req = request, res = response ) => {
 
     const token = req.header('Authorization');
 
@@ -35,12 +35,12 @@ const validarJWT = async(req = request, res = response, next) => {
         console.log(err);
         res.status(401).json({
             msg: 'Token inválido'
-        })
+        });
     }
 
-}
+};
 
 
 module.exports = {
     validarJWT
-}
+};

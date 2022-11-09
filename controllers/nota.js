@@ -11,9 +11,9 @@ const obtenerNotas = async(req, res = response) => {
 
     const notas = await Nota.find({ usuario: req.usuario.id });
 
-    res.json(notas)
+    res.json(notas);
 
-}
+};
 
 
 const crearNota = async(req, res = response) => {
@@ -23,14 +23,14 @@ const crearNota = async(req, res = response) => {
     const data = {
         descripcion,
         usuario: req.usuario._id
-    }
+    };
 
     const nota = new Nota(data);
     await nota.save();
 
     res.status(201).json(nota);
 
-}
+};
 
 
 const actualizarNota = async(req, res = response) => {
@@ -44,7 +44,7 @@ const actualizarNota = async(req, res = response) => {
         msg: 'La nota se actualizó correctamente'
     });
 
-}
+};
 
 const eliminarNota = async(req, res = response) => {
 
@@ -53,9 +53,9 @@ const eliminarNota = async(req, res = response) => {
 
     res.json({
         msg: 'La nota se eliminó correctamente'
-    })
+    });
 
-}
+};
 
 
 module.exports = {
@@ -63,4 +63,4 @@ module.exports = {
     crearNota,
     actualizarNota,
     eliminarNota
-}
+};

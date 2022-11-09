@@ -11,17 +11,17 @@ const generarJwt = (uid = '') => {
         }, (err, token) => {
             if (err) {
                 console.log(err);
-                reject('Error generando el token')
+                reject('Error generando el token');
             } else {
-                resolve(token)
+                resolve(token);
             }
-        })
+        });
 
-    })
+    });
 
-}
+};
 
 
 module.exports = {
     generarJwt
-}
+};

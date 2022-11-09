@@ -14,7 +14,7 @@ class Server {
             angular: '/',
             auth: '/api/auth',
             nota: '/api/notas'
-        }
+        };
 
         /* conexión a db */
         this.dbConnect();
@@ -55,7 +55,7 @@ class Server {
     listen() {
         this.app.listen(this.port, () => {
             console.log('corriendo en el puerto', this.port);
-        })
+        });
     }
 
 }

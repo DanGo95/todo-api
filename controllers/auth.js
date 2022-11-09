@@ -16,7 +16,7 @@ const login = async(req, res = response) => {
         if (!usuario) {
             return res.status(400).json({
                 msg: 'Email/Password incorrecto'
-            })
+            });
         }
 
         /* valida la contraseña */
@@ -25,7 +25,7 @@ const login = async(req, res = response) => {
         if (!passwordValido) {
             return res.status(400).json({
                 msg: 'Email/Password incorrecto'
-            })
+            });
         }
 
         /* genera el jwt */
@@ -41,10 +41,10 @@ const login = async(req, res = response) => {
         console.log(err);
         return res.status(500).json({
             msg: 'Algo salió mal'
-        })
+        });
     }
 
-}
+};
 
 const registro = async(req, res = response) => {
 
@@ -60,12 +60,12 @@ const registro = async(req, res = response) => {
 
     res.json({
         usuario
-    })
+    });
 
-}
+};
 
 
 module.exports = {
     login,
     registro
-}
+};
